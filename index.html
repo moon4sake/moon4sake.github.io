@@ -52,6 +52,7 @@
   .side li.mail { font-size: 12px; white-space: nowrap; }
 
   p { margin: 0 0 9px; }
+  .hl { margin-left: -4px; padding: 2px 4px; background: rgba(255, 186, 24, 0.32); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   h2 { margin: 24px 0 0; font-size: 13px; font-weight: 500; color: var(--muted); }
   .rule { height: 1px; margin-top: 6px; background: var(--line); }
   .yr { display: flex; align-items: center; gap: 12px; margin: 12px 0 0; font-size: 12.5px; font-weight: 600; }
@@ -62,6 +63,8 @@
   .au { font-size: 13.5px; color: var(--muted); }
   .au b { color: var(--ink); font-weight: 600; }
   sup { position: relative; top: -0.42em; font-size: 0.75em; line-height: 0; vertical-align: baseline; }
+  sup.ast { top: -0.12em; font-size: 0.9em; }
+  .legend sup.ast { top: -0.4em; font-size: 0.85em; }
   .w { font-size: 13px; font-style: italic; color: var(--muted); }
   .row > .full { grid-column: 1 / -1; }
   .m { margin-top: 2px; font-size: 12.5px; }
@@ -103,7 +106,7 @@
   <main class="main">
       <p>I am a Ph.D. student in the <a href="https://siml.kaist.ac.kr">SIML lab</a> at <a href="https://gsai.kaist.ac.kr">KAIST AI</a>, advised by <a href="https://juho-lee.github.io">Prof. Juho Lee</a>.</p>
       <p>I am interested in <b>building efficient language-model agents</b>. Agents today rely on ever-larger models. I aim to build small agents that adaptively select which capabilities of large models to retain. My research spans <a href="#skim">pruning</a>, <a href="#had">knowledge distillation</a>, and <a href="#had">agent harness</a>. Beyond efficiency, I also study how to make models <b>reliable</b>.</p>
-      <p><b>I am on the job market for positions starting in Spring 2027.</b> I have one year of alternative military service (Technical Research Personnel) remaining.</p>
+      <p><b class="hl">I am on the job market for positions starting in Spring 2027.</b> I have one year of alternative military service (Technical Research Personnel) remaining.</p>
 
       <h2 class="mono" id="education">Education</h2>
       <div class="rule"></div>
@@ -124,7 +127,7 @@
       <div class="row"><div><div class="t">Safety Alignment Backfires: Preventing Re-emergence of Suppressed Concepts in Fine-tuned Text-to-Image Diffusion Models</div><div class="au">Sanghyun Kim, <b>Moonseok Choi</b>, Jinwoo Shin, Juho Lee</div><div class="m mono"><a href="https://arxiv.org/abs/2412.00357">Paper</a></div></div><div><span class="ve other mono">arXiv</span></div></div>
       <div class="row"><div><div class="t">Safeguard Text-to-Image Diffusion Models with Human Feedback Inversion</div><div class="au">Sanghyun Kim, Seohyeon Jung, Balhae Kim, <b>Moonseok Choi</b>, Jinwoo Shin, Juho Lee</div><div class="m mono"><a href="https://arxiv.org/abs/2407.21032">Paper</a><a href="https://github.com/nannullna/safeguard-hfi">Code</a></div></div><div><span class="ve conf mono">ECCV</span></div></div>
       <div class="row"><div><div class="t">A Simple Early Exiting Framework for Accelerated Sampling in Diffusion Models</div><div class="au">Taehong Moon, <b>Moonseok Choi</b>, EungGu Yun, Jongmin Yoon, Gayoung Lee, Jaewoong Cho, Juho Lee</div><div class="m mono"><a href="https://arxiv.org/abs/2408.05927">Paper</a><a href="https://github.com/taehong-moon/ee-diffusion">Code</a></div></div><div><span class="ve conf mono">ICML</span></div></div>
-      <div class="row"><div><div class="t">Sparse Weight Averaging with Multiple Particles for Iterative Magnitude Pruning</div><div class="au"><b>Moonseok Choi</b>*, Hyungi Lee*, Giung Nam*, Juho Lee</div><div class="m mono"><a href="https://openreview.net/forum?id=Y9t7MqZtCR">Paper</a><a href="https://openreview.net/forum?id=Y9t7MqZtCR">Code</a></div></div><div><span class="ve conf mono">ICLR</span></div></div>
+      <div class="row"><div><div class="t">Sparse Weight Averaging with Multiple Particles for Iterative Magnitude Pruning</div><div class="au"><b>Moonseok Choi</b><sup class="ast">*</sup>, Hyungi Lee<sup class="ast">*</sup>, Giung Nam<sup class="ast">*</sup>, Juho Lee</div><div class="m mono"><a href="https://openreview.net/forum?id=Y9t7MqZtCR">Paper</a><a href="https://openreview.net/forum?id=Y9t7MqZtCR">Code</a></div></div><div><span class="ve conf mono">ICLR</span></div></div>
       <p class="yr mono">2023</p>
       <div class="row"><div><div class="t">Towards Safe Self-Distillation of Internet-Scale Text-to-Image Diffusion Models</div><div class="au">Sanghyun Kim, Seohyeon Jung, Balhae Kim, <b>Moonseok Choi</b>, Jinwoo Shin, Juho Lee</div><div class="w">Workshop on Deployment Challenges for Generative AI</div><div class="m mono"><a href="https://arxiv.org/abs/2307.05977">Paper</a><a href="https://github.com/nannullna/safe-diffusion">Code</a></div></div><div><span class="ve other mono">ICML Workshop</span></div></div>
       <div class="row"><div><div class="t">Early Exiting for Accelerated Inference in Diffusion Models</div><div class="au">Taehong Moon, <b>Moonseok Choi</b>, Eunggu Yun, Jongmin Yoon, Gayoung Lee, Juho Lee</div><div class="w">Workshop on Structured Probabilistic Inference &amp; Generative Modeling</div><div class="m mono"><a href="https://icml.cc/virtual/2023/28071">Paper</a></div></div><div><span class="ve other mono">ICML Workshop</span></div></div>
@@ -133,8 +136,8 @@
       <div class="row"><div><div class="t">Equal Experience in Recommender Systems</div><div class="au">Jaewoong Cho, <b>Moonseok Choi</b>, Changho Suh</div><div class="m mono"><a href="https://arxiv.org/abs/2210.05936">Paper</a></div></div><div><span class="ve other mono">arXiv</span></div></div>
       <p class="yr mono">2019</p>
       <div class="row"><div><div class="t">Diffusion Forecasting of Electric Vehicles Based on Consumers’ Preferences: A Korean case</div><div class="au"><b>Moonseok Choi</b>, Deokjoo Lee, Jinsu Shin, Piao Ri</div><div class="w">Proceedings of the 4th IAEE Eurasian Conference</div><div class="m mono"><a href="https://iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16638">Paper</a></div></div><div><span class="ve other mono">IAEE Eurasian</span></div></div>
-      <div class="row"><div><div class="t">Selecting Optimal Locations of Public Charging Stations for Electric Vehicles Using the Big Data of Driving Behaviors: A Case Study of Seoul, Korea</div><div class="au">Jihyeok Jung*, <b>Moonseok Choi</b>*, Deokjoo Lee</div><div class="w">Proceedings of the 42nd IAEE International Conference</div><div class="m mono"><a href="https://www.iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16317">Paper</a></div></div><div><span class="ve other mono">IAEE</span></div></div>
-      <p class="legend mono">* equal contribution, † co-corresponding author</p>
+      <div class="row"><div><div class="t">Selecting Optimal Locations of Public Charging Stations for Electric Vehicles Using the Big Data of Driving Behaviors: A Case Study of Seoul, Korea</div><div class="au">Jihyeok Jung<sup class="ast">*</sup>, <b>Moonseok Choi</b><sup class="ast">*</sup>, Deokjoo Lee</div><div class="w">Proceedings of the 42nd IAEE International Conference</div><div class="m mono"><a href="https://www.iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16317">Paper</a></div></div><div><span class="ve other mono">IAEE</span></div></div>
+      <p class="legend mono"><sup class="ast">*</sup> equal contribution, <sup>†</sup> co-corresponding</p>
 
       <h2 class="mono" id="experience">Experience</h2>
       <div class="rule"></div>

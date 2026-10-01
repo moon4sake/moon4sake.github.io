@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moonseok Choi</title>
+<meta name="description" content="Moonseok Choi, Ph.D. student at KAIST AI. Efficient language-model agents: pruning, knowledge distillation, and agent harness.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Grays are the Radix Colors sand scale (steps 3, 6, 9, 11, 12); the accent is Radix amber 10. */
+  :root {
+    --bg: #F1F0EF;
+    --line: #DAD9D6;
+    --soon: #8D8D86;
+    --muted: #63635E;
+    --ink: #21201C;
+    --amber: #FFBA18;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 24px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 14.5px/1.55 "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; }
+
+  /* links: black text on a thick amber underline */
+  a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--amber); }
+  a:hover { background: var(--amber); }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  .pair {
+    display: grid; grid-template-columns: 214px minmax(0, 1fr); align-items: start;
+    max-width: 936px; margin: 0 auto; padding: 44px 28px 64px;
+  }
+  .side { position: sticky; top: 44px; }
+  .main { padding-left: 32px; border-left: 1px solid var(--line); }
+
+  .ph { display: block; width: 150px; height: 184px; margin-bottom: 14px; object-fit: cover; object-position: 50% 30%; background: #fff; }
+  .name { margin: 0; font-size: 1.45rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; }
+  .role { margin: 3px 0 14px; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .side ul { list-style: none; margin: 0 30px 0 0; padding: 0; }
+  .side li { padding: 5px 0; border-top: 1px solid var(--line); font-size: 13px; }
+
+  p { margin: 0 0 9px; }
+  h2 { margin: 24px 0 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+  .rule { height: 1px; margin-top: 6px; background: var(--line); }
+  .yr { display: flex; align-items: center; gap: 12px; margin: 12px 0 0; font-size: 12.5px; font-weight: 600; }
+  h2 + .yr { margin-top: 6px; }
+  .yr::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 20px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .t { font-weight: 600; }
+  .au { font-size: 13.5px; color: var(--muted); }
+  .au b { color: var(--ink); font-weight: 600; }
+  .w { font-size: 13px; font-style: italic; color: var(--muted); }
+  .m { margin-top: 2px; font-size: 12.5px; }
+  .m > * { margin-right: 14px; }
+  .soon { color: var(--soon); }
+  .ve { font-size: 12.5px; font-weight: 600; white-space: nowrap; border-bottom: 2px solid var(--amber); }
+  .dt { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .legend { margin: 10px 0 0; font-size: 12px; color: var(--muted); }
+  footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 720px) {
+    .pair { grid-template-columns: 1fr; padding: 24px 18px 48px; }
+    .side { position: static; display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 16px; margin-bottom: 20px; }
+    .ph { width: 96px; height: 118px; margin: 0; grid-row: span 3; }
+    .side ul { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; }
+    .side li { border: 0; padding: 0; }
+    .main { padding: 18px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+    .row { grid-template-columns: 1fr; row-gap: 3px; }
+    .row > div:last-child { order: -1; }
+  }
+</style>
+</head>
+<body>
+<div class="pair">
+
+  <aside class="side">
+    <img class="ph" src="photo.jpg" alt="Portrait of Moonseok Choi">
+    <h1 class="name">Moonseok Choi</h1>
+    <p class="role mono">ph.d. student @ kaist ai</p>
+    <ul class="mono">
+      <li><a href="mailto:ms.choi@kaist.ac.kr">email</a></li>
+      <li><a href="cv.pdf">cv</a></li>
+      <li><a href="https://scholar.google.com/citations?user=i-pOb1IAAAAJ">scholar</a></li>
+      <li><a href="https://github.com/moon4sake">github</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+      <p>I am a Ph.D. student in the <a href="https://siml.kaist.ac.kr">SIML lab</a> at <a href="https://gsai.kaist.ac.kr">KAIST AI</a>, advised by <a href="https://juho-lee.github.io">Prof. Juho Lee</a>.</p>
+      <p>I am interested in <b>building efficient language-model agents</b>. Agents today rely on ever-larger models. I aim to build small agents that adaptively select which capabilities of large models to retain. My research spans <a href="#skim">pruning</a>, <a href="#had">knowledge distillation</a>, and <a href="#had">agent harness</a>. Beyond efficiency, I also study how to make models <b>reliable</b>.</p>
+
+      <h2 class="mono" id="education">education</h2>
+      <div class="rule"></div>
+      <div class="row"><div><div class="t">KAIST</div><div class="au">Ph.D. in Artificial Intelligence, advised by Prof. Juho Lee</div></div><div class="dt mono">Mar. 2021 – present</div></div>
+      <div class="row"><div><div class="t">Seoul National University</div><div class="au">M.S. in Industrial Engineering, advised by Prof. Deokjoo Lee</div></div><div class="dt mono">Mar. 2019 – Feb. 2021</div></div>
+      <div class="row"><div><div class="t">Seoul National University</div><div class="au">B.S. in Industrial Engineering, cum laude</div></div><div class="dt mono">Mar. 2014 – Feb. 2019</div></div>
+
+      <h2 class="mono" id="publications">publications</h2>
+      <p class="yr mono">2026</p>
+      <div class="row" id="had"><div><div class="t">Harness-Aware Distillation for Small Language Model Agents</div><div class="au"><b>Moonseok Choi</b>, Taehong Moon, Giung Nam†, Juho Lee†</div><div class="m mono"><span class="soon">paper (soon)</span><a href="https://moon4sake.github.io/harness-aware-distillation">project page</a><span class="soon">code (soon)</span></div></div><div><span class="ve mono">arXiv</span></div></div>
+      <div class="row" id="skim"><div><div class="t">SKIM: Pruning Large Language Model Agents via Selective Knowledge Informed Masking</div><div class="au"><b>Moonseok Choi</b>, Jongwon Jeong, Minki Kang, Giung Nam†, Juho Lee†</div><div class="m mono"><span class="soon">paper (soon)</span><span class="soon">project page (soon)</span><span class="soon">code (soon)</span></div></div><div><span class="ve mono">NeurIPS</span></div></div>
+      <div class="row"><div><div class="t">Confidence is not universal: task-dependent calibration and emergent behavior in LLMs</div><div class="au">Chaeyun Jang, <b>Moonseok Choi</b>, Yegon Kim, Seungyoo Lee, Juho Lee†, Hyungi Lee†</div><div class="m mono"><a href="https://icml.cc/virtual/2026/poster/66660">paper</a></div></div><div><span class="ve mono">ICML</span></div></div>
+      <p class="yr mono">2025</p>
+      <div class="row"><div><div class="t">Test Time Scaling for Neural Processes</div><div class="au">Hyungi Lee, <b>Moonseok Choi</b>, Hyunsu Kim, Kyunghyun Cho, Rajesh Ranganath, Juho Lee</div><div class="m mono"><a href="https://papers.nips.cc/paper_files/paper/2025/hash/50bd13958b700bdcc2db1eee4d822be0-Abstract-Conference.html">paper</a></div></div><div><span class="ve mono">NeurIPS</span></div></div>
+      <div class="row"><div><div class="t">Projection-Based Augmentation with Non-Relevant General Data for Enhanced Domain Adaptation in LLMs</div><div class="au">Seungyoo Lee, Giung Nam, <b>Moonseok Choi</b>, Hyungi Lee†, Juho Lee†</div><div class="m mono"><a href="https://openreview.net/forum?id=7EjdHkOwc4">paper</a></div></div><div><span class="ve mono">NeurIPS</span></div></div>
+      <div class="row"><div><div class="t">Verbalized Confidence Triggers Self-Verification: Emergent Behavior Without Explicit Reasoning Supervision</div><div class="au">Chaeyun Jang, <b>Moonseok Choi</b>, Yegon Kim, Hyungi Lee, Juho Lee</div><div class="w">Workshop on Reliable and Responsible Foundation Models</div><div class="m mono"><a href="https://arxiv.org/abs/2506.03723">paper</a></div></div><div><span class="ve mono">ICML Workshop</span></div></div>
+      <p class="yr mono">2024</p>
+      <div class="row"><div><div class="t">Safety Alignment Backfires: Preventing Re-emergence of Suppressed Concepts in Fine-tuned Text-to-Image Diffusion Models</div><div class="au">Sanghyun Kim, <b>Moonseok Choi</b>, Jinwoo Shin, Juho Lee</div><div class="m mono"><a href="https://arxiv.org/abs/2412.00357">paper</a></div></div><div><span class="ve mono">arXiv</span></div></div>
+      <div class="row"><div><div class="t">Safeguard Text-to-Image Diffusion Models with Human Feedback Inversion</div><div class="au">Sanghyun Kim, Seohyeon Jung, Balhae Kim, <b>Moonseok Choi</b>, Jinwoo Shin, Juho Lee</div><div class="m mono"><a href="https://arxiv.org/abs/2407.21032">paper</a><a href="https://github.com/nannullna/safeguard-hfi">code</a></div></div><div><span class="ve mono">ECCV</span></div></div>
+      <div class="row"><div><div class="t">A Simple Early Exiting Framework for Accelerated Sampling in Diffusion Models</div><div class="au">Taehong Moon, <b>Moonseok Choi</b>, EungGu Yun, Jongmin Yoon, Gayoung Lee, Jaewoong Cho, Juho Lee</div><div class="m mono"><a href="https://arxiv.org/abs/2408.05927">paper</a><a href="https://github.com/taehong-moon/ee-diffusion">code</a></div></div><div><span class="ve mono">ICML</span></div></div>
+      <div class="row"><div><div class="t">Sparse Weight Averaging with Multiple Particles for Iterative Magnitude Pruning</div><div class="au"><b>Moonseok Choi</b>*, Hyungi Lee*, Giung Nam*, Juho Lee</div><div class="m mono"><a href="https://openreview.net/forum?id=Y9t7MqZtCR">paper</a><a href="https://openreview.net/forum?id=Y9t7MqZtCR">code</a></div></div><div><span class="ve mono">ICLR</span></div></div>
+      <p class="yr mono">2023</p>
+      <div class="row"><div><div class="t">Towards Safe Self-Distillation of Internet-Scale Text-to-Image Diffusion Models</div><div class="au">Sanghyun Kim, Seohyeon Jung, Balhae Kim, <b>Moonseok Choi</b>, Jinwoo Shin, Juho Lee</div><div class="w">Workshop on Deployment Challenges for Generative AI</div><div class="m mono"><a href="https://arxiv.org/abs/2307.05977">paper</a><a href="https://github.com/nannullna/safe-diffusion">code</a></div></div><div><span class="ve mono">ICML Workshop</span></div></div>
+      <div class="row"><div><div class="t">Early Exiting for Accelerated Inference in Diffusion Models</div><div class="au">Taehong Moon, <b>Moonseok Choi</b>, Eunggu Yun, Jongmin Yoon, Gayoung Lee, Juho Lee</div><div class="w">Workshop on Structured Probabilistic Inference &amp; Generative Modeling</div><div class="m mono"><a href="https://icml.cc/virtual/2023/28071">paper</a></div></div><div><span class="ve mono">ICML Workshop</span></div></div>
+      <p class="yr mono">2022</p>
+      <div class="row"><div><div class="t">Fine-tuning Diffusion Models with Limited Data</div><div class="au">Taehong Moon, <b>Moonseok Choi</b>, Gayoung Lee, Jung-Woo Ha, Juho Lee</div><div class="w">Workshop on Score-Based Methods</div><div class="m mono"><a href="https://neurips.cc/virtual/2022/61172">paper</a></div></div><div><span class="ve mono">NeurIPS Workshop</span></div></div>
+      <div class="row"><div><div class="t">Equal Experience in Recommender Systems</div><div class="au">Jaewoong Cho, <b>Moonseok Choi</b>, Changho Suh</div><div class="m mono"><a href="https://arxiv.org/abs/2210.05936">paper</a></div></div><div><span class="ve mono">arXiv</span></div></div>
+      <p class="yr mono">2019</p>
+      <div class="row"><div><div class="t">Diffusion Forecasting of Electric Vehicles Based on Consumers’ Preferences: A Korean case</div><div class="au"><b>Moonseok Choi</b>, Deokjoo Lee, Jinsu Shin, Piao Ri</div><div class="w">Proceedings of the 4th IAEE Eurasian Conference</div><div class="m mono"><a href="https://iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16638">paper</a></div></div><div><span class="ve mono">IAEE Eurasian</span></div></div>
+      <div class="row"><div><div class="t">Selecting Optimal Locations of Public Charging Stations for Electric Vehicles Using the Big Data of Driving Behaviors: A Case Study of Seoul, Korea</div><div class="au">Jihyeok Jung*, <b>Moonseok Choi</b>*, Deokjoo Lee</div><div class="w">Proceedings of the 42nd IAEE International Conference</div><div class="m mono"><a href="https://www.iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16317">paper</a></div></div><div><span class="ve mono">IAEE</span></div></div>
+      <p class="legend mono">* equal contribution, † co-corresponding author</p>
+
+      <h2 class="mono" id="experience">experience</h2>
+      <div class="rule"></div>
+      <div class="row"><div><div class="t">KRAFTON AI</div><div class="au">Research intern, core research team</div></div><div class="dt mono">Dec. 2024 – Feb. 2025</div></div>
+
+      <h2 class="mono">academic services</h2>
+      <div class="rule"></div>
+      <div class="row"><div><div class="t">Conference reviewer</div><div class="au">NeurIPS (2022–26), ICLR (2024–26), ICML (2025–26), AAAI (2025–27)</div></div><div></div></div>
+
+      <footer class="mono">last updated october 2026</footer>
+  </main>
+
+</div>
+</body>
+</html>

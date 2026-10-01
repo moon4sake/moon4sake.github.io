@@ -59,6 +59,7 @@
   .au { font-size: 13.5px; color: var(--muted); }
   .au b { color: var(--ink); font-weight: 600; }
   .w { font-size: 13px; font-style: italic; color: var(--muted); }
+  .row > .full { grid-column: 1 / -1; }
   .m { margin-top: 2px; font-size: 12.5px; }
   .m > * { margin-right: 14px; }
   .soon { color: var(--soon); }
@@ -75,7 +76,7 @@
     .side li { border: 0; padding: 0; }
     .main { padding: 18px 0 0; border-left: 0; border-top: 1px solid var(--line); }
     .row { grid-template-columns: 1fr; row-gap: 3px; }
-    .row > div:last-child { order: -1; }
+    .row > div:nth-child(2) { order: -1; }
   }
 </style>
 </head>
@@ -103,7 +104,7 @@
       <h2 class="mono" id="education">education</h2>
       <div class="rule"></div>
       <div class="row"><div><div class="t">KAIST</div><div class="au">Ph.D. in Artificial Intelligence, advised by Prof. Juho Lee</div></div><div class="dt mono">Mar. 2021 – present</div></div>
-      <div class="row"><div><div class="t">Seoul National University</div><div class="au">M.S. in Industrial Engineering, advised by Prof. Deokjoo Lee</div></div><div class="dt mono">Mar. 2019 – Feb. 2021</div></div>
+      <div class="row"><div><div class="t">Seoul National University</div><div class="au">M.S. in Industrial Engineering, advised by Prof. Deokjoo Lee</div></div><div class="dt mono">Mar. 2019 – Feb. 2021</div><div class="w full">Thesis: Measuring the Economic Value of Data in Machine Learning: A Cooperative Game Approach</div></div>
       <div class="row"><div><div class="t">Seoul National University</div><div class="au">B.S. in Industrial Engineering, cum laude</div></div><div class="dt mono">Mar. 2014 – Feb. 2019</div></div>
 
       <h2 class="mono" id="publications">publications</h2>
@@ -126,9 +127,9 @@
       <p class="yr mono">2022</p>
       <div class="row"><div><div class="t">Fine-tuning Diffusion Models with Limited Data</div><div class="au">Taehong Moon, <b>Moonseok Choi</b>, Gayoung Lee, Jung-Woo Ha, Juho Lee</div><div class="w">Workshop on Score-Based Methods</div><div class="m mono"><a href="https://neurips.cc/virtual/2022/61172">paper</a></div></div><div><span class="ve other mono">NeurIPS Workshop</span></div></div>
       <div class="row"><div><div class="t">Equal Experience in Recommender Systems</div><div class="au">Jaewoong Cho, <b>Moonseok Choi</b>, Changho Suh</div><div class="m mono"><a href="https://arxiv.org/abs/2210.05936">paper</a></div></div><div><span class="ve other mono">arXiv</span></div></div>
-      <!-- <p class="yr mono">2019</p>
-      <!-- <div class="row"><div><div class="t">Diffusion Forecasting of Electric Vehicles Based on Consumers’ Preferences: A Korean case</div><div class="au"><b>Moonseok Choi</b>, Deokjoo Lee, Jinsu Shin, Piao Ri</div><div class="w">Proceedings of the 4th IAEE Eurasian Conference</div><div class="m mono"><a href="https://iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16638">paper</a></div></div><div><span class="ve other mono">IAEE Eurasian</span></div></div> -->
-      <!-- <div class="row"><div><div class="t">Selecting Optimal Locations of Public Charging Stations for Electric Vehicles Using the Big Data of Driving Behaviors: A Case Study of Seoul, Korea</div><div class="au">Jihyeok Jung*, <b>Moonseok Choi</b>*, Deokjoo Lee</div><div class="w">Proceedings of the 42nd IAEE International Conference</div><div class="m mono"><a href="https://www.iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16317">paper</a></div></div><div><span class="ve other mono">IAEE</span></div></div> --> -->
+      <p class="yr mono">2019</p>
+      <div class="row"><div><div class="t">Diffusion Forecasting of Electric Vehicles Based on Consumers’ Preferences: A Korean case</div><div class="au"><b>Moonseok Choi</b>, Deokjoo Lee, Jinsu Shin, Piao Ri</div><div class="w">Proceedings of the 4th IAEE Eurasian Conference</div><div class="m mono"><a href="https://iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16638">paper</a></div></div><div><span class="ve other mono">IAEE Eurasian</span></div></div>
+      <div class="row"><div><div class="t">Selecting Optimal Locations of Public Charging Stations for Electric Vehicles Using the Big Data of Driving Behaviors: A Case Study of Seoul, Korea</div><div class="au">Jihyeok Jung*, <b>Moonseok Choi</b>*, Deokjoo Lee</div><div class="w">Proceedings of the 42nd IAEE International Conference</div><div class="m mono"><a href="https://www.iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16317">paper</a></div></div><div><span class="ve other mono">IAEE</span></div></div>
       <p class="legend mono">* equal contribution, † co-corresponding author</p>
 
       <h2 class="mono" id="experience">experience</h2>

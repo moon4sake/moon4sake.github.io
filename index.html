@@ -52,7 +52,9 @@
 
   .ph { display: block; width: 150px; height: 184px; margin-bottom: 14px; object-fit: cover; object-position: 50% 30%; background: #fff; border: 1px solid var(--line); }
   .name { margin: 0; font-size: 1.45rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; }
-  .role { margin: 3px 0 14px; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .role { margin: 3px 0 0; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .loc { margin: 1px 0 14px; font-size: 12px; color: var(--muted); }
+  .pin { width: 12px; height: 12px; margin: 0 4px 0 -1px; vertical-align: -2px; fill: currentColor; }
   .side ul { list-style: none; margin: 0 30px 0 0; padding: 0; }
   .side li { padding: 5px 0; border-top: 1px solid var(--line); font-size: 13px; }
   .side li.mail { font-size: 12px; white-space: nowrap; }
@@ -88,7 +90,8 @@
   @media (max-width: 720px) {
     .pair { grid-template-columns: 1fr; padding: 24px 18px 48px; }
     .side { position: static; display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 16px; margin-bottom: 20px; }
-    .ph { width: 96px; height: 118px; margin: 0; grid-row: span 3; }
+    .ph { width: 96px; height: 118px; margin: 0; grid-row: span 4; }
+    .loc { margin-bottom: 8px; }
     .side ul { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; }
     .side li { border: 0; padding: 0; }
     .main { padding: 18px 0 0; border-left: 0; border-top: 1px solid var(--line); }
@@ -104,8 +107,10 @@
     <img class="ph" src="photo.jpg" alt="Portrait of Moonseok Choi">
     <h1 class="name">Moonseok Choi</h1>
     <p class="role mono">Ph.D. student @ KAIST AI</p>
+    <p class="loc mono"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Seoul, Korea</p>
     <ul class="mono">
       <li class="mail">ms.choi {at} kaist.ac.kr</li>
+      <li class="mail">choijung4 {at} gmail.com</li>
       <li><a href="cv.pdf">CV</a></li>
       <li><a href="https://scholar.google.com/citations?user=i-pOb1IAAAAJ">Scholar</a></li>
       <li><a href="https://github.com/moon4sake">GitHub</a></li>

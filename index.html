@@ -85,6 +85,7 @@
   .soon { color: var(--soon); }
   .ve { padding: 1px 6px; font-size: 12.5px; font-weight: 400; color: var(--muted); white-space: nowrap; background: rgba(255, 186, 24, 0.16); }
   .dt { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .dt .exp { display: block; height: 0; text-align: right; }
   .legend { margin: 10px 0 0; font-size: 12px; color: var(--muted); }
   footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
 
@@ -98,6 +99,7 @@
     .main { padding: 18px 0 0; border-left: 0; border-top: 1px solid var(--line); }
     .row { grid-template-columns: 1fr; row-gap: 0; }
     .row > div:nth-child(2) { grid-column: 1; grid-row: auto; order: -1; margin-bottom: 3px; }
+    .dt .exp { display: inline; height: auto; }
   }
 </style>
 </head>
@@ -132,9 +134,13 @@
       <p><b class="hl">I am on the job market for positions starting in Spring 2027.</b> I have one year of alternative military service (Technical Research Personnel) remaining.</p>
 
       <h2 id="education">Education</h2>
-      <div class="row"><div><div class="t">KAIST</div><div class="au">Ph.D. in Artificial Intelligence, advised by Prof. Juho Lee</div></div><div class="dt mono">Mar. 2021 – Feb. 2027 (expected)</div><div class="w full">Thesis: Model Compression: From Standalone Networks to Deployed Agents<a class="mono sl" href="defense_slides.pdf">Slides</a></div></div>
+      <div class="row"><div><div class="t">KAIST</div><div class="au">Ph.D. in Artificial Intelligence, advised by Prof. Juho Lee</div></div><div class="dt mono">Mar. 2021 – Feb. 2027 <span class="exp">(expected)</span></div><div class="w full">Thesis: Model Compression: From Standalone Networks to Deployed Agents<a class="mono sl" href="defense_slides.pdf">Slides</a></div></div>
       <div class="row"><div><div class="t">Seoul National University</div><div class="au">M.S. in Industrial Engineering, advised by Prof. Deokjoo Lee</div></div><div class="dt mono">Mar. 2019 – Feb. 2021</div><div class="w full">Thesis: Measuring the Economic Value of Data in Machine Learning: A Cooperative Game Approach</div></div>
       <div class="row"><div><div class="t">Seoul National University</div><div class="au">B.S. in Industrial Engineering, cum laude</div></div><div class="dt mono">Mar. 2014 – Feb. 2019</div></div>
+
+      <h2 id="experience">Experience</h2>
+      <div class="row"><div><div class="t">Kakao</div><div class="au">Research intern, Language Model Team</div></div><div class="dt mono">Dec. 2026 – Feb. 2027 <span class="exp">(expected)</span></div></div>
+      <div class="row"><div><div class="t">KRAFTON AI</div><div class="au">Research intern, Core Research Team, mentored by <a href="https://sites.google.com/view/jaewoongcho">Jaewoong Cho</a></div></div><div class="dt mono">Dec. 2024 – Feb. 2025</div><div class="w full">Research on task-adaptive layer pruning for large language models</div></div>
 
       <h2 id="publications">Publications</h2>
       <div class="row" id="had"><div><div class="t">Harness-Aware Distillation for Small Language Model Agents</div><div class="au"><b>Moonseok Choi</b>, Taehong Moon, Giung Nam<sup>†</sup>, Juho Lee<sup>†</sup></div><div class="m mono"><a href="https://arxiv.org/abs/2610.02858">Paper</a><a href="https://moon4sake.github.io/harness-aware-distillation">Project page</a></div></div><div><span class="ve other mono">arXiv 2026</span></div></div>
@@ -154,9 +160,6 @@
       <div class="row"><div><div class="t">Diffusion Forecasting of Electric Vehicles Based on Consumers’ Preferences: A Korean Case</div><div class="au"><b>Moonseok Choi</b>, Deokjoo Lee, Jinsu Shin, Piao Ri</div><div class="w">Proceedings of the 4th IAEE Eurasian Conference</div><div class="m mono"><a href="https://iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16638">Paper</a></div></div><div><span class="ve other mono">IAEE Eurasian 2019</span></div></div>
       <div class="row"><div><div class="t">Selecting Optimal Locations of Public Charging Stations for Electric Vehicles Using the Big Data of Driving Behaviors: A Case Study of Seoul, Korea</div><div class="au">Jihyeok Jung<sup class="ast">*</sup>, <b>Moonseok Choi</b><sup class="ast">*</sup>, Deokjoo Lee</div><div class="w">Proceedings of the 42nd IAEE International Conference</div><div class="m mono"><a href="https://www.iaee.org/en/publications/proceedingsabstractpdf.aspx?id=16317">Paper</a></div></div><div><span class="ve other mono">IAEE 2019</span></div></div>
       <p class="legend mono"><sup class="ast">*</sup> equal contribution, <sup>†</sup> co-corresponding</p>
-
-      <h2 id="experience">Experience</h2>
-      <div class="row"><div><div class="t">KRAFTON AI</div><div class="au">Research intern, Core Research Team, mentored by <a href="https://sites.google.com/view/jaewoongcho">Jaewoong Cho</a></div></div><div class="dt mono">Dec. 2024 – Feb. 2025</div><div class="w full">Research on task-adaptive layer pruning for large language models</div></div>
 
       <h2>Academic services</h2>
       <div class="row"><div><div class="t">Conference reviewer</div><div class="au">NeurIPS (2022–26), ICLR (2024–27), ICML (2025–26), AAAI (2025–27), AISTATS (2027)</div></div><div></div></div>
